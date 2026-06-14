@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Queensland Unclaimed Money Search — MissingCash</title>
+<meta property="og:title" content="Queenslanders: You May Have Unclaimed Money Waiting">
+<meta property="og:description" content="Hundreds of millions in unclaimed money sits in Queensland government registers. Search free in 30 seconds.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#080d1a;color:#e8edf5;font-family:'Inter',sans-serif;min-height:100vh;overflow-x:hidden;}
+.blob{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;}
+.blob1{width:500px;height:500px;background:rgba(0,229,160,0.06);top:-100px;right:-100px;}
+.blob2{width:400px;height:400px;background:rgba(0,100,200,0.07);bottom:0;left:-100px;}
+.hero{
+  position:relative;z-index:10;
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:60px 24px;text-align:center;
+}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.25);border-radius:100px;padding:6px 16px;font-size:0.75rem;font-weight:600;color:#00e5a0;margin-bottom:24px;letter-spacing:0.06em;text-transform:uppercase;}
+.dot{width:7px;height:7px;border-radius:50%;background:#00e5a0;animation:pulse 1.5s infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.5vw,4rem);font-weight:900;line-height:1.1;margin-bottom:18px;}
+.grad{background:linear-gradient(135deg,#fff 0%,#00e5a0 70%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.sub{font-size:1.05rem;color:#8892a4;max-width:480px;line-height:1.75;margin-bottom:40px;}
+.card{width:100%;max-width:440px;background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:28px;}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+label{font-size:0.72rem;font-weight:600;color:#8892a4;text-transform:uppercase;letter-spacing:0.06em;}
+input{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:12px 14px;color:#e8edf5;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;transition:border-color 0.2s;width:100%;}
+input:focus{border-color:#00e5a0;}
+input::placeholder{color:#8892a4;}
+.state-badge{background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.2);border-radius:8px;padding:10px 14px;font-size:0.85rem;color:#00e5a0;font-weight:600;margin-bottom:14px;text-align:center;}
+.btn{width:100%;padding:15px;background:linear-gradient(135deg,#00e5a0,#00b07a);color:#000;font-weight:700;font-size:1rem;border:none;border-radius:12px;cursor:pointer;font-family:'Inter',sans-serif;transition:opacity 0.2s;}
+.btn:hover{opacity:0.9;}
+.proof{display:flex;justify-content:center;gap:28px;margin-top:32px;flex-wrap:wrap;}
+.proof-item{text-align:center;font-size:0.82rem;color:#8892a4;}
+.proof-num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#00e5a0;}
+.story{max-width:440px;margin:40px auto 0;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:22px;}
+.stars{color:#f0b429;font-size:0.85rem;margin-bottom:8px;}
+.story-text{font-size:0.88rem;color:#8892a4;line-height:1.65;font-style:italic;margin-bottom:12px;}
+.reviewer{font-size:0.82rem;font-weight:600;}
+footer{position:relative;z-index:10;border-top:1px solid rgba(255,255,255,0.08);padding:24px;text-align:center;font-size:0.8rem;color:#8892a4;}
+footer a{color:#8892a4;text-decoration:none;margin:0 8px;}
+</style>
+</head>
+<body>
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<section class="hero">
+  <div class="badge"><span class="dot"></span> Queensland Search Active</div>
+  <h1><span class="grad">Queenslanders<br>Have Unclaimed Cash</span></h1>
+  <p class="sub">Over $480 million in unclaimed money sits in Queensland government registers. Search your name free — takes 30 seconds.</p>
+  <div class="card">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" id="fname" placeholder="e.g. Sarah">
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" id="lname" placeholder="e.g. Johnson">
+    </div>
+    <div class="state-badge">📍 Searching: Queensland Registers</div>
+    <button class="btn" onclick="window.location.href='/?state=Queensland&fn='+document.getElementById('fname').value+'&ln='+document.getElementById('lname').value">🔍 Search My Name Free</button>
+  </div>
+  <div class="proof">
+    <div class="proof-item"><div class="proof-num">$480M+</div>Unclaimed in QLD</div>
+    <div class="proof-item"><div class="proof-num">42K+</div>QLD searches done</div>
+    <div class="proof-item"><div class="proof-num">$4.99</div>To unlock results</div>
+  </div>
+  <div class="story">
+    <div class="stars">★★★★★</div>
+    <div class="story-text">"Found $3,240 from a super fund I forgot about. Took 5 minutes and cost me $4.99. Absolute no-brainer."</div>
+    <div class="reviewer">Sarah K. · Brisbane, QLD</div>
+  </div>
+</section>
+<footer>
+  <a href="/">Home</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a>
+  <p style="margin-top:10px;">© 2026 MissingCash Australia</p>
+</footer>
+</body>
+</html>

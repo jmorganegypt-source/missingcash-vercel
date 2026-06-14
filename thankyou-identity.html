@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Confirmed — Identity Theft Recovery Guide</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LLNFV2MEQ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1LLNFV2MEQ');gtag('event','purchase',{transaction_id:Date.now().toString(),value:4.99,currency:'AUD',items:[{item_name:'Identity Theft Recovery Guide'}]});</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:#061826;color:#dde8f5;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;}
+.card{background:#0b2a3d;border:1px solid rgba(200,0,0,0.3);border-radius:20px;max-width:520px;width:100%;padding:48px 36px;text-align:center;box-shadow:0 0 60px rgba(200,0,0,0.07),0 24px 64px rgba(0,0,0,0.4);animation:fadeUp 0.6s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.tick{width:72px;height:72px;background:linear-gradient(135deg,#cc0000,#ff4444);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 0 32px rgba(200,0,0,0.4);font-size:2rem;animation:pop 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.3s both;}
+@keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.badge{display:inline-block;background:rgba(200,0,0,0.12);border:1px solid rgba(200,0,0,0.35);color:#f87171;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:14px;}
+h1{font-family:'Playfair Display',serif;font-size:clamp(22px,5vw,30px);font-weight:900;margin-bottom:10px;background:linear-gradient(135deg,#dde8f5,#f87171);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.sub{color:#7a9ab5;font-size:15px;line-height:1.6;margin-bottom:28px;}
+.sos{background:rgba(200,0,0,0.08);border:1px solid rgba(200,0,0,0.2);border-radius:10px;padding:14px 16px;margin-bottom:20px;font-size:13px;color:#dde8f5;text-align:left;}
+.amount-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:28px;padding:12px 20px;background:rgba(0,0,0,0.2);border-radius:10px;border:1px solid rgba(255,255,255,0.06);}
+.amount-label{color:#7a9ab5;font-size:14px;} .amount-value{color:#f5b942;font-weight:700;font-size:17px;} .dot{width:4px;height:4px;background:#7a9ab5;border-radius:50%;}
+.dl-btn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:17px;background:linear-gradient(135deg,#cc0000,#ff4444);color:#fff;font-weight:800;font-size:15px;border-radius:12px;text-decoration:none;box-shadow:0 8px 24px rgba(200,0,0,0.35);margin-bottom:14px;transition:all 0.2s;}
+.dl-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(200,0,0,0.5);}
+.note{font-size:12px;color:#7a9ab5;margin-bottom:28px;}
+.divider{border:none;border-top:1px solid rgba(255,255,255,0.07);margin:24px 0;}
+.steps h3{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#7a9ab5;margin-bottom:14px;}
+.step{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:rgba(221,232,245,0.85);line-height:1.5;margin-bottom:10px;}
+.sn{width:22px;height:22px;border-radius:50%;background:rgba(200,0,0,0.12);border:1px solid rgba(200,0,0,0.3);color:#f87171;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.hotlines{background:rgba(0,0,0,0.2);border-radius:10px;padding:16px;margin-top:20px;margin-bottom:0;}
+.hotlines h4{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#7a9ab5;margin-bottom:12px;}
+.hl{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:13px;}
+.hl:last-child{border:none;} .hl-org{color:#dde8f5;} .hl-num{color:#f5b942;font-weight:700;}
+.upsell{margin-top:24px;background:linear-gradient(135deg,rgba(245,185,66,0.08),rgba(245,185,66,0.03));border:1px solid rgba(245,185,66,0.25);border-radius:14px;padding:22px;text-align:center;}
+.upsell .tag{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#f5b942;margin-bottom:10px;}
+.upsell h4{font-family:'Playfair Display',serif;font-size:17px;margin-bottom:7px;}
+.upsell p{font-size:13px;color:#7a9ab5;line-height:1.5;margin-bottom:14px;}
+.upsell-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:linear-gradient(135deg,#f5b942,#e8a020);color:#000;font-weight:700;font-size:13px;border-radius:8px;text-decoration:none;}
+.footer-note{margin-top:24px;font-size:12px;color:#7a9ab5;}
+.footer-note a{color:#f87171;text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="tick">🪪</div>
+  <div class="badge">Payment Confirmed</div>
+  <h1>Your Identity Recovery Guide is Ready!</h1>
+  <p class="sub">Download your guide now. Follow Chapter 2 first — the 24-hour emergency response plan is the most important place to start.</p>
+  <div class="sos">🚨 <strong>In crisis right now?</strong> Call <strong style="color:#f5b942;">IDCARE 1800 595 160</strong> or <strong style="color:#f5b942;">Lifeline 13 11 14</strong> immediately. This guide supports your recovery journey.</div>
+  <div class="amount-row"><span class="amount-label">Identity Theft Recovery Guide</span><span class="dot"></span><span class="amount-value">AUD $4.99 ✓</span></div>
+  <a class="dl-btn" href="Identity_Theft_Recovery_Guide.pdf" download onclick="gtag('event','download',{event_category:'guide',event_label:'identity_theft'})">
+    <svg width="20" height="20" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download Identity Recovery Guide
+  </a>
+  <p class="note">PDF · 10 chapters · Template letters included · Instant download</p>
+  <hr class="divider">
+  <div class="steps">
+    <h3>Do these first — today</h3>
+    <div class="step"><span class="sn">1</span><span>Call your bank immediately — request emergency freeze (Chapter 3 has exact scripts for CBA, NAB, Westpac, ANZ)</span></div>
+    <div class="step"><span class="sn">2</span><span>Apply for credit ban with Equifax, Illion and Experian — stops anyone taking credit in your name (Chapter 4)</span></div>
+    <div class="step"><span class="sn">3</span><span>Call IDCARE on 1800 595 160 — Australia's free identity recovery service creates a personal plan for you</span></div>
+    <div class="step"><span class="sn">4</span><span>Get a police report number — essential for all bank and super claims (Chapter 7 guides you through this)</span></div>
+  </div>
+  <div class="hotlines">
+    <h4>Emergency Hotlines</h4>
+    <div class="hl"><span class="hl-org">🛡️ IDCARE — Free Identity Recovery</span><span class="hl-num">1800 595 160</span></div>
+    <div class="hl"><span class="hl-org">📞 Lifeline — 24/7 Crisis Support</span><span class="hl-num">13 11 14</span></div>
+    <div class="hl"><span class="hl-org">🏛️ ATO Fraud Line</span><span class="hl-num">13 28 61</span></div>
+    <div class="hl"><span class="hl-org">⚖️ AFCA — Financial Disputes</span><span class="hl-num">1800 931 678</span></div>
+  </div>
+  <div class="upsell" style="margin-top:24px;">
+    <div class="tag">🏆 Get Everything</div>
+    <h4>Get All 4 Guides — Best Value</h4>
+    <p>MissingCash + Crypto Recovery + Cyber Security + Identity Recovery. Save over 50% with the bundle.</p>
+    <a class="upsell-btn" href="https://buy.stripe.com/cNi14m9ikdc93492rS4c80g" target="_blank">Get Bundle — $39.90</a>
+  </div>
+  <p class="footer-note">Questions? <a href="mailto:admin@missingcash.com.au">admin@missingcash.com.au</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Identity Theft Recovery Guide — MissingCash Australia</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--navy:#061826;--navy-mid:#0b2a3d;--gold:#f5b942;--gold-dark:#e8a020;--text:#dde8f5;--muted:#7a9ab5;--red:#cc0000;--red-light:#ff4444;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--text);min-height:100vh;overflow-x:hidden;}
+nav{position:sticky;top:0;z-index:100;background:rgba(6,24,38,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(245,185,66,0.15);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-brand{font-weight:800;font-size:1.1rem;color:var(--gold);}
+.nav-cta{background:linear-gradient(135deg,var(--red),var(--red-light));color:#fff;font-weight:700;font-size:0.85rem;padding:10px 20px;border-radius:8px;text-decoration:none;}
+.hero{padding:80px 24px 60px;text-align:center;background:linear-gradient(180deg,#1a0505 0%,var(--navy) 100%);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(ellipse,rgba(200,0,0,0.1) 0%,transparent 70%);pointer-events:none;}
+.badge{display:inline-block;background:rgba(200,0,0,0.12);border:1px solid rgba(200,0,0,0.3);color:#f87171;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:20px;}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:900;margin-bottom:16px;line-height:1.15;}
+h1 span{color:var(--gold);}
+.hero-sub{color:var(--muted);font-size:1.05rem;max-width:540px;margin:0 auto 36px;line-height:1.7;}
+.sos-box{background:rgba(200,0,0,0.1);border:1px solid rgba(200,0,0,0.35);border-radius:14px;padding:18px 24px;max-width:520px;margin:0 auto 28px;display:flex;gap:14px;align-items:center;text-align:left;}
+.sos-box p{color:var(--text);font-size:0.88rem;line-height:1.55;}
+.price-box{display:inline-flex;align-items:center;gap:12px;background:#0b2a3d;border:1px solid rgba(200,0,0,0.3);border-radius:14px;padding:16px 28px;margin-bottom:24px;}
+.price{font-size:2.4rem;font-weight:900;color:var(--gold);}
+.price-sub{color:var(--muted);font-size:0.85rem;}
+.buy-btn{display:inline-block;background:linear-gradient(135deg,var(--red),var(--red-light));color:#fff;font-weight:800;font-size:1.1rem;padding:18px 48px;border-radius:14px;text-decoration:none;box-shadow:0 10px 32px rgba(200,0,0,0.35);transition:all 0.2s;}
+.buy-btn:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(200,0,0,0.5);}
+.section{max-width:800px;margin:0 auto;padding:60px 24px;}
+.section-tag{font-size:0.72rem;font-weight:700;color:#f87171;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;}
+.section h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:32px;}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:48px;}
+.feature-card{background:var(--navy-mid);border:1px solid rgba(200,0,0,0.15);border-radius:16px;padding:22px;}
+.feature-icon{font-size:2rem;margin-bottom:12px;}
+.feature-title{font-weight:700;font-size:0.95rem;margin-bottom:8px;}
+.feature-desc{color:var(--muted);font-size:0.85rem;line-height:1.6;}
+.chapter-list{display:flex;flex-direction:column;gap:0;}
+.chapter{border-bottom:1px solid rgba(255,255,255,0.06);padding:18px 0;display:flex;align-items:flex-start;gap:16px;}
+.ch-num{min-width:36px;height:36px;background:rgba(200,0,0,0.12);border:1px solid rgba(200,0,0,0.3);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.85rem;color:#f87171;flex-shrink:0;}
+.ch-title{font-weight:700;font-size:0.95rem;margin-bottom:4px;}
+.ch-desc{color:var(--muted);font-size:0.85rem;line-height:1.5;}
+.hotline-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:32px 0;}
+.hotline{background:var(--navy-mid);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:16px;}
+.hotline-org{font-weight:700;font-size:0.9rem;margin-bottom:4px;}
+.hotline-num{color:var(--gold);font-size:1.1rem;font-weight:800;}
+.hotline-desc{color:var(--muted);font-size:0.78rem;margin-top:4px;}
+.cta-section{background:linear-gradient(135deg,#1a0505,#0b1020);border:2px solid rgba(200,0,0,0.3);border-radius:20px;padding:48px 32px;text-align:center;margin:0 24px 60px;}
+.cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;margin-bottom:12px;}
+.cta-section p{color:var(--muted);max-width:460px;margin:0 auto 28px;line-height:1.65;}
+footer{border-top:1px solid rgba(255,255,255,0.07);padding:24px;text-align:center;font-size:0.8rem;color:var(--muted);}
+footer a{color:var(--muted);text-decoration:none;margin:0 8px;}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo"><div class="nav-brand">MissingCash</div></a>
+  <a href="https://buy.stripe.com/28EcN46686NLdIN8Qg4c80e" class="nav-cta" target="_blank">Get Guide — $4.99</a>
+</nav>
+
+<section class="hero">
+  <div class="badge">🆘 Identity Theft Recovery — Australia</div>
+  <h1>Someone Stole Your Identity.<br><span>Here's How to Fight Back.</span></h1>
+  <p class="hero-sub">Identity theft is destroying lives across Australia. Someone has your name, your ID, your super. This guide gives you the exact official steps to take back control — even if you have no ID left.</p>
+
+  <div class="sos-box">
+    <span style="font-size:2rem;">🚨</span>
+    <p><strong>If you are in crisis right now</strong> due to financial loss or identity theft — call <strong style="color:var(--gold);">Lifeline 13 11 14</strong> or <strong style="color:var(--gold);">IDCARE 1800 595 160</strong> immediately. This guide is for your recovery journey.</p>
+  </div>
+
+  <div class="price-box">
+    <div><div class="price">$4.99</div><div class="price-sub">One-time · Instant PDF download</div></div>
+  </div><br>
+  <a href="https://buy.stripe.com/28EcN46686NLdIN8Qg4c80e" class="buy-btn" target="_blank">🪪 Get Instant Access — $4.99</a>
+  <p style="color:var(--muted);font-size:0.8rem;margin-top:14px;">🔒 Secure via Stripe · 30-day money back · No subscription</p>
+</section>
+
+<div class="section">
+  <div class="section-tag">What You'll Learn</div>
+  <h2>Every Step to Reclaim Your Identity</h2>
+  <div class="feature-grid">
+    <div class="feature-card"><div class="feature-icon">🏦</div><div class="feature-title">Freeze Your Bank Accounts</div><div class="feature-desc">Emergency freeze process for CBA, NAB, Westpac, ANZ — even without ID, by phone.</div></div>
+    <div class="feature-card"><div class="feature-icon">🪪</div><div class="feature-title">Rebuild Your ID From Zero</div><div class="feature-desc">Get a birth certificate with just your name and DOB — the foundation for rebuilding everything.</div></div>
+    <div class="feature-card"><div class="feature-icon">💳</div><div class="feature-title">Credit Ban — Stop New Credit</div><div class="feature-desc">Free credit ban with Equifax, Illion and Experian — stops anyone taking credit in your name.</div></div>
+    <div class="feature-card"><div class="feature-icon">🐷</div><div class="feature-title">Recover Stolen Super</div><div class="feature-desc">ATO fraud line, AFCA complaint process, APRA reporting — step by step with template letters.</div></div>
+    <div class="feature-card"><div class="feature-icon">👮</div><div class="feature-title">Police & Cyber Reporting</div><div class="feature-desc">How to get a police report number (essential for all claims) and report to ACSC and Scamwatch.</div></div>
+    <div class="feature-card"><div class="feature-icon">⚖️</div><div class="feature-title">Free Legal Help</div><div class="feature-desc">Legal Aid contacts for every state, AFCA financial disputes, and when to escalate to the ombudsman.</div></div>
+  </div>
+
+  <div class="section-tag">Emergency Hotlines — Free</div>
+  <h2>Key Numbers Included in the Guide</h2>
+  <div class="hotline-grid">
+    <div class="hotline"><div class="hotline-org">🛡️ IDCARE</div><div class="hotline-num">1800 595 160</div><div class="hotline-desc">Australia's free identity recovery service</div></div>
+    <div class="hotline"><div class="hotline-org">📞 Lifeline</div><div class="hotline-num">13 11 14</div><div class="hotline-desc">24/7 crisis support</div></div>
+    <div class="hotline"><div class="hotline-org">🏛️ ATO Fraud</div><div class="hotline-num">13 28 61</div><div class="hotline-desc">Report super fraud & tax identity theft</div></div>
+    <div class="hotline"><div class="hotline-org">⚖️ AFCA</div><div class="hotline-num">1800 931 678</div><div class="hotline-desc">Free financial disputes — banks & super</div></div>
+    <div class="hotline"><div class="hotline-org">🔐 ACSC</div><div class="hotline-num">1300 CYBER1</div><div class="hotline-desc">Australian Cyber Security Centre</div></div>
+    <div class="hotline"><div class="hotline-org">📋 Scamwatch</div><div class="hotline-num">1300 795 995</div><div class="hotline-desc">Report scams & identity theft</div></div>
+  </div>
+
+  <div class="section-tag">What's Inside — 10 Chapters</div>
+  <h2>Complete Chapter Guide</h2>
+  <div class="chapter-list">
+    <div class="chapter"><div class="ch-num">1</div><div><div class="ch-title">Understanding Identity Theft in Australia</div><div class="ch-desc">Types of identity theft, how it happens, and what criminals actually do with your information.</div></div></div>
+    <div class="chapter"><div class="ch-num">2</div><div><div class="ch-title">First 24 Hours — Emergency Response Plan</div><div class="ch-desc">The exact sequence of calls to make and actions to take in the first 24 hours after discovering identity theft.</div></div></div>
+    <div class="chapter"><div class="ch-num">3</div><div><div class="ch-title">Freeze Your Bank Accounts — All Major Banks</div><div class="ch-desc">Step-by-step for CBA, NAB, Westpac, ANZ, Bendigo and more. What to say, what they'll ask, your rights.</div></div></div>
+    <div class="chapter"><div class="ch-num">4</div><div><div class="ch-title">Put a Credit Ban on Your Name (Free)</div><div class="ch-desc">Equifax, Illion and Experian — how to apply a credit ban in under 10 minutes for free. Essential step.</div></div></div>
+    <div class="chapter"><div class="ch-num">5</div><div><div class="ch-title">Rebuilding Your Identity Documents</div><div class="ch-desc">Birth certificate → Medicare card → Driver's licence → Passport. State-by-state guide with links and fees.</div></div></div>
+    <div class="chapter"><div class="ch-num">6</div><div><div class="ch-title">Recovering Stolen Superannuation</div><div class="ch-desc">ATO fraud team, AFCA process, APRA reporting. Template complaint letters included.</div></div></div>
+    <div class="chapter"><div class="ch-num">7</div><div><div class="ch-title">Reporting to Police & Cyber Authorities</div><div class="ch-desc">How to get a police report number online in every state. ACSC, Scamwatch, ReportCyber — all explained.</div></div></div>
+    <div class="chapter"><div class="ch-num">8</div><div><div class="ch-title">Getting Free Legal Help</div><div class="ch-desc">Legal Aid contacts for every state. When to use AFCA. How to write a legal demand letter to your bank.</div></div></div>
+    <div class="chapter"><div class="ch-num">9</div><div><div class="ch-title">IDCARE — Australia's Identity Recovery Service</div><div class="ch-desc">How IDCARE works, what to tell them, what a personalised recovery plan looks like, and what to expect.</div></div></div>
+    <div class="chapter"><div class="ch-num">10</div><div><div class="ch-title">Prevention — Protecting Yourself Going Forward</div><div class="ch-desc">Credit monitoring, secure document storage, mail security, and how to protect elderly relatives.</div></div></div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <h2>Get the Identity Theft Recovery Guide</h2>
+  <p>10 chapters. Every official contact. Template letters included. Written for everyday Australians.</p>
+  <div style="display:flex;justify-content:center;align-items:baseline;gap:10px;margin-bottom:24px;">
+    <span style="font-size:2.4rem;font-weight:900;color:var(--gold);">$4.99</span>
+    <span style="color:var(--muted);font-size:0.85rem;">AUD · one-time · instant PDF</span>
+  </div>
+  <a href="https://buy.stripe.com/28EcN46686NLdIN8Qg4c80e" class="buy-btn" target="_blank">🪪 Get Instant Access — $4.99</a>
+  <p style="color:var(--muted);font-size:0.8rem;margin-top:14px;">Or get <a href="bundle.html" style="color:var(--gold);">all 4 guides for $39.90</a> — best value</p>
+</div>
+
+<footer>
+  <a href="/">Home</a><a href="cyber-security.html">Cyber Security</a><a href="bundle.html">Bundle Deal</a><a href="privacy.html">Privacy</a>
+  <p style="margin-top:10px;">© 2026 MissingCash Australia · ABN 52 347 989 391</p>
+</footer>
+</body>
+</html>

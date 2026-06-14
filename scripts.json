@@ -1,0 +1,26 @@
+{
+  "scripts": [
+    {
+      "id": "premium-listing",
+      "title": "The Premium Listing Teaser",
+      "category": "listing",
+      "placeholders": [
+        "Property Address"
+      ]
+    },
+    {
+      "id": "market-update",
+      "title": "The Market Update (Authority Builder)",
+      "category": "authority",
+      "placeholders": [
+        "Name"
+      ]
+    },
+    {
+      "id": "quick-tip",
+      "title": "The Quick Tip (Social Media Filler)",
+      "category": "social",
+      "placeholders": []
+    }
+  ]
+}

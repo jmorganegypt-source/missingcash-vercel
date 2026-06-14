@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Confirmed — MissingCash Premium Guide</title>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LLNFV2MEQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1LLNFV2MEQ');
+  // Track purchase conversion
+  gtag('event', 'purchase', {
+    transaction_id: Date.now().toString(),
+    value: 4.99,
+    currency: 'AUD',
+    items: [{ item_name: 'MissingCash Premium Guide' }]
+  });
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #0a1628;
+    --navy-mid: #112240;
+    --teal: #00b4a6;
+    --teal-light: #00d4c4;
+    --gold: #c9a84c;
+    --gold-light: #f0c84a;
+    --white: #f8f9fc;
+    --muted: #8892a4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Background grid */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(0,180,166,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,180,166,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+
+  /* Glow blob */
+  body::after {
+    content: '';
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0,180,166,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(0,180,166,0.2);
+    border-radius: 20px;
+    max-width: 520px;
+    width: 100%;
+    padding: 48px 40px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 60px rgba(0,180,166,0.08), 0 24px 64px rgba(0,0,0,0.4);
+    animation: fadeUp 0.6s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .tick-wrap {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    box-shadow: 0 0 32px rgba(0,180,166,0.4);
+    animation: pop 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.3s both;
+  }
+
+  @keyframes pop {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  .tick-wrap svg {
+    width: 36px;
+    height: 36px;
+    stroke: white;
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .tick-path {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: draw 0.4s ease 0.7s both;
+  }
+
+  @keyframes draw {
+    to { stroke-dashoffset: 0; }
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.35);
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 5vw, 34px);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--white) 40%, var(--teal-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .subtitle {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 36px;
+  }
+
+  .amount-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 32px;
+    padding: 14px 20px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .amount-label { color: var(--muted); font-size: 14px; }
+  .amount-value { color: var(--gold-light); font-weight: 700; font-size: 18px; }
+  .amount-dot { width: 4px; height: 4px; background: var(--muted); border-radius: 50%; }
+
+  .download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 18px 24px;
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    color: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 8px 24px rgba(0,180,166,0.35);
+    margin-bottom: 16px;
+  }
+
+  .download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0,180,166,0.5);
+    background: linear-gradient(135deg, var(--teal-light), #20ffe0);
+  }
+
+  .download-btn:active { transform: translateY(0); }
+
+  .download-btn svg {
+    width: 20px; height: 20px;
+    stroke: var(--navy);
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+  }
+
+  .note {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    margin: 28px 0;
+  }
+
+  .what-next h3 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .steps {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .steps li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: rgba(248,249,252,0.8);
+    line-height: 1.5;
+  }
+
+  .step-num {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(0,180,166,0.15);
+    border: 1px solid rgba(0,180,166,0.3);
+    color: var(--teal-light);
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .upsell-card {
+    margin-top: 28px;
+    background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.03));
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .upsell-card .tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+  }
+
+  .upsell-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    margin-bottom: 8px;
+    color: var(--white);
+  }
+
+  .upsell-card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .upsell-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: 0 4px 16px rgba(201,168,76,0.3);
+  }
+
+  .upsell-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(201,168,76,0.45);
+  }
+
+  .footer-note {
+    margin-top: 28px;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    .card { padding: 36px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="tick-wrap">
+    <svg viewBox="0 0 24 24">
+      <polyline class="tick-path" points="20 6 9 17 4 12"/>
+    </svg>
+  </div>
+
+  <div class="badge">Payment Confirmed</div>
+
+  <h1>Your Guide is Ready to Download</h1>
+  <p class="subtitle">Thank you for your purchase. Your MissingCash Premium Guide is waiting — click below to download it instantly.</p>
+
+  <div class="amount-row">
+    <span class="amount-label">MissingCash Premium Guide</span>
+    <span class="amount-dot"></span>
+    <span class="amount-value">AUD $4.99 ✓</span>
+  </div>
+
+  <a class="download-btn" href="MissingCash_Premium_Guide-2.pdf" download onclick="gtag('event','download',{event_category:'guide',event_label:'missingcash_premium'})">
+    <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download Your Guide Now
+  </a>
+
+  <p class="note">PDF • Instant download • No account needed</p>
+
+  <hr class="divider">
+
+  <div class="what-next">
+    <h3>What to do next</h3>
+    <ul class="steps">
+      <li>
+        <span class="step-num">1</span>
+        <span>Download your guide using the button above — save it to your phone or computer</span>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <span>Follow the step-by-step instructions to search every Australian register for unclaimed money in your name</span>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <span>Submit your claim directly to ASIC, ATO, or the relevant state authority — it's free to claim</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Crypto Upsell -->
+  <div class="upsell-card">
+    <div class="tag">🔥 Also Available</div>
+    <h4>MissingCrypto Recovery Guide</h4>
+    <p>Lost access to old crypto wallets or forgotten exchange accounts? This guide walks you through every recovery path — including dormant Australian exchange accounts.</p>
+    <a class="upsell-btn" href="https://buy.stripe.com/9B600iamo3Bz48d6I84c801" target="_blank">
+      Get the Crypto Guide — $29.90
+    </a>
+  </div>
+
+  <p class="footer-note">Questions? Contact us at <a href="mailto:support@missingcash.com.au" style="color:var(--teal-light);text-decoration:none;">support@missingcash.com.au</a></p>
+</div>
+
+</body>
+</html>

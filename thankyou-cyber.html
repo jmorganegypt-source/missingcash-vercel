@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Confirmed — Cyber Security Guide</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LLNFV2MEQ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1LLNFV2MEQ');gtag('event','purchase',{transaction_id:Date.now().toString(),value:4.99,currency:'AUD',items:[{item_name:'Cyber Security Guide'}]});</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:#061826;color:#dde8f5;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;}
+.card{background:#0b2a3d;border:1px solid rgba(0,100,255,0.3);border-radius:20px;max-width:520px;width:100%;padding:48px 36px;text-align:center;box-shadow:0 0 60px rgba(0,100,255,0.08),0 24px 64px rgba(0,0,0,0.4);animation:fadeUp 0.6s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.tick{width:72px;height:72px;background:linear-gradient(135deg,#0064ff,#0096ff);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 0 32px rgba(0,100,255,0.4);font-size:2rem;animation:pop 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.3s both;}
+@keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.badge{display:inline-block;background:rgba(0,100,255,0.12);border:1px solid rgba(0,100,255,0.35);color:#60a5fa;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:14px;}
+h1{font-family:'Playfair Display',serif;font-size:clamp(22px,5vw,30px);font-weight:900;margin-bottom:10px;background:linear-gradient(135deg,#dde8f5,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.sub{color:#7a9ab5;font-size:15px;line-height:1.6;margin-bottom:28px;}
+.amount-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:28px;padding:12px 20px;background:rgba(0,0,0,0.2);border-radius:10px;border:1px solid rgba(255,255,255,0.06);}
+.amount-label{color:#7a9ab5;font-size:14px;} .amount-value{color:#f5b942;font-weight:700;font-size:17px;} .dot{width:4px;height:4px;background:#7a9ab5;border-radius:50%;}
+.dl-btn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:17px;background:linear-gradient(135deg,#0064ff,#0096ff);color:#fff;font-weight:800;font-size:15px;border-radius:12px;text-decoration:none;box-shadow:0 8px 24px rgba(0,100,255,0.35);margin-bottom:14px;transition:all 0.2s;}
+.dl-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,100,255,0.5);}
+.note{font-size:12px;color:#7a9ab5;margin-bottom:28px;}
+.divider{border:none;border-top:1px solid rgba(255,255,255,0.07);margin:24px 0;}
+.steps h3{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#7a9ab5;margin-bottom:14px;}
+.step{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:rgba(221,232,245,0.85);line-height:1.5;margin-bottom:10px;}
+.sn{width:22px;height:22px;border-radius:50%;background:rgba(0,100,255,0.15);border:1px solid rgba(0,100,255,0.3);color:#60a5fa;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.upsell{margin-top:24px;background:linear-gradient(135deg,rgba(245,185,66,0.08),rgba(245,185,66,0.03));border:1px solid rgba(245,185,66,0.25);border-radius:14px;padding:22px;text-align:center;}
+.upsell .tag{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#f5b942;margin-bottom:10px;}
+.upsell h4{font-family:'Playfair Display',serif;font-size:17px;margin-bottom:7px;}
+.upsell p{font-size:13px;color:#7a9ab5;line-height:1.5;margin-bottom:14px;}
+.upsell-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:linear-gradient(135deg,#f5b942,#e8a020);color:#000;font-weight:700;font-size:13px;border-radius:8px;text-decoration:none;}
+.footer-note{margin-top:24px;font-size:12px;color:#7a9ab5;}
+.footer-note a{color:#60a5fa;text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="tick">🔐</div>
+  <div class="badge">Payment Confirmed</div>
+  <h1>Your Cyber Security Guide is Ready!</h1>
+  <p class="sub">Download your guide now and start protecting your phone, accounts and digital life immediately.</p>
+  <div class="amount-row"><span class="amount-label">Cyber Security Guide</span><span class="dot"></span><span class="amount-value">AUD $4.99 ✓</span></div>
+  <a class="dl-btn" href="Cyber_Security_Guide.pdf" download onclick="gtag('event','download',{event_category:'guide',event_label:'cyber_security'})">
+    <svg width="20" height="20" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download Cyber Security Guide
+  </a>
+  <p class="note">PDF · 12 chapters · Instant download · Save to a safe location</p>
+  <hr class="divider">
+  <div class="steps">
+    <h3>Start here — most important steps</h3>
+    <div class="step"><span class="sn">1</span><span>Open Chapter 3 (Android) or Chapter 4 (iPhone) first — check your phone right now for spy apps</span></div>
+    <div class="step"><span class="sn">2</span><span>Complete the App Permissions Audit in Chapter 5 — takes 10 minutes and closes the most common hacker entry points</span></div>
+    <div class="step"><span class="sn">3</span><span>Set up 2FA on all banking and email accounts using Chapter 7's checklist</span></div>
+    <div class="step"><span class="sn">4</span><span>Share the guide with family — especially elderly relatives who are most targeted</span></div>
+  </div>
+  <div class="upsell">
+    <div class="tag">🏆 Get Everything</div>
+    <h4>Get All 4 Guides — Best Value</h4>
+    <p>MissingCash + Crypto Recovery + Cyber Security + Identity Recovery. Save over 50% with the bundle.</p>
+    <a class="upsell-btn" href="https://buy.stripe.com/cNi14m9ikdc93492rS4c80g" target="_blank">Get Bundle — $39.90</a>
+  </div>
+  <p class="footer-note">Questions? <a href="mailto:admin@missingcash.com.au">admin@missingcash.com.au</a></p>
+</div>
+</body>
+</html>

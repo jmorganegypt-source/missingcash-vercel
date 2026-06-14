@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Security Guide — MissingCash Australia</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--navy:#061826;--navy-mid:#0b2a3d;--gold:#f5b942;--gold-dark:#e8a020;--text:#dde8f5;--muted:#7a9ab5;--blue:#0064ff;--blue-light:#0096ff;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--text);min-height:100vh;overflow-x:hidden;}
+nav{position:sticky;top:0;z-index:100;background:rgba(6,24,38,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(245,185,66,0.15);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-brand{font-weight:800;font-size:1.1rem;color:var(--gold);}
+.nav-cta{background:linear-gradient(135deg,var(--blue),var(--blue-light));color:#fff;font-weight:700;font-size:0.85rem;padding:10px 20px;border-radius:8px;text-decoration:none;}
+.hero{padding:80px 24px 60px;text-align:center;background:linear-gradient(180deg,#071e2e 0%,var(--navy) 100%);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(ellipse,rgba(0,100,255,0.12) 0%,transparent 70%);pointer-events:none;}
+.badge{display:inline-block;background:rgba(0,100,255,0.12);border:1px solid rgba(0,100,255,0.3);color:#60a5fa;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:20px;}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:900;margin-bottom:16px;line-height:1.15;}
+h1 span{color:var(--gold);}
+.hero-sub{color:var(--muted);font-size:1.05rem;max-width:540px;margin:0 auto 36px;line-height:1.7;}
+.price-box{display:inline-flex;align-items:center;gap:12px;background:#0b2a3d;border:1px solid rgba(0,100,255,0.3);border-radius:14px;padding:16px 28px;margin-bottom:24px;}
+.price{font-size:2.4rem;font-weight:900;color:var(--gold);}
+.price-sub{color:var(--muted);font-size:0.85rem;}
+.buy-btn{display:inline-block;background:linear-gradient(135deg,var(--blue),var(--blue-light));color:#fff;font-weight:800;font-size:1.1rem;padding:18px 48px;border-radius:14px;text-decoration:none;box-shadow:0 10px 32px rgba(0,100,255,0.35);transition:all 0.2s;}
+.buy-btn:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(0,100,255,0.5);}
+.section{max-width:800px;margin:0 auto;padding:60px 24px;}
+.section-tag{font-size:0.72rem;font-weight:700;color:var(--blue-light);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;}
+.section h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:32px;}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:48px;}
+.feature-card{background:var(--navy-mid);border:1px solid rgba(0,100,255,0.15);border-radius:16px;padding:22px;}
+.feature-icon{font-size:2rem;margin-bottom:12px;}
+.feature-title{font-weight:700;font-size:0.95rem;margin-bottom:8px;}
+.feature-desc{color:var(--muted);font-size:0.85rem;line-height:1.6;}
+.chapter-list{display:flex;flex-direction:column;gap:0;}
+.chapter{border-bottom:1px solid rgba(255,255,255,0.06);padding:18px 0;display:flex;align-items:flex-start;gap:16px;}
+.ch-num{min-width:36px;height:36px;background:rgba(0,100,255,0.15);border:1px solid rgba(0,100,255,0.3);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.85rem;color:var(--blue-light);flex-shrink:0;}
+.ch-title{font-weight:700;font-size:0.95rem;margin-bottom:4px;}
+.ch-desc{color:var(--muted);font-size:0.85rem;line-height:1.5;}
+.warning-box{background:rgba(255,100,0,0.08);border:1px solid rgba(255,100,0,0.25);border-radius:14px;padding:24px;margin:40px 0;display:flex;gap:16px;align-items:flex-start;}
+.warning-box p{color:var(--text);font-size:0.9rem;line-height:1.6;}
+.cta-section{background:linear-gradient(135deg,#0b2a3d,#071e2e);border:2px solid rgba(0,100,255,0.3);border-radius:20px;padding:48px 32px;text-align:center;margin:0 24px 60px;}
+.cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;margin-bottom:12px;}
+.cta-section p{color:var(--muted);max-width:460px;margin:0 auto 28px;line-height:1.65;}
+footer{border-top:1px solid rgba(255,255,255,0.07);padding:24px;text-align:center;font-size:0.8rem;color:var(--muted);}
+footer a{color:var(--muted);text-decoration:none;margin:0 8px;}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo"><div class="nav-brand">MissingCash</div></a>
+  <a href="https://buy.stripe.com/5kQbJ0eCEgolgUZ6I84c80d" class="nav-cta" target="_blank">Get Guide — $4.99</a>
+</nav>
+
+<section class="hero">
+  <div class="badge">📱 Cyber Security Guide — Australia</div>
+  <h1>Is Your Phone <span>Already Compromised?</span></h1>
+  <p class="hero-sub">Most Australians have no idea their phone has been hacked. This guide shows you exactly what to look for, how to remove it, and how to lock everything down — step by step.</p>
+  <div class="price-box">
+    <div><div class="price">$4.99</div><div class="price-sub">One-time · Instant PDF download</div></div>
+  </div><br>
+  <a href="https://buy.stripe.com/5kQbJ0eCEgolgUZ6I84c80d" class="buy-btn" target="_blank">🔐 Get Instant Access — $4.99</a>
+  <p style="color:var(--muted);font-size:0.8rem;margin-top:14px;">🔒 Secure via Stripe · 30-day money back · No subscription</p>
+</section>
+
+<div class="section">
+  <div class="section-tag">What You'll Learn</div>
+  <h2>Everything You Need to Detect, Remove & Prevent</h2>
+  <div class="feature-grid">
+    <div class="feature-card"><div class="feature-icon">🕵️</div><div class="feature-title">Detect Spy Apps</div><div class="feature-desc">Exact steps to find hidden spyware, stalkerware and remote access tools on Android and iPhone.</div></div>
+    <div class="feature-card"><div class="feature-icon">🔋</div><div class="feature-title">Warning Signs</div><div class="feature-desc">Battery draining fast? Phone warm when idle? Unusual data usage? These are red flags — we explain all of them.</div></div>
+    <div class="feature-card"><div class="feature-icon">📲</div><div class="feature-title">Check App Permissions</div><div class="feature-desc">Which apps are accessing your camera, microphone, location and contacts right now — and how to stop them.</div></div>
+    <div class="feature-card"><div class="feature-icon">🔑</div><div class="feature-title">Lock Down Accounts</div><div class="feature-desc">Google, Apple ID, Facebook, banking apps, email — full lockdown checklist for every account.</div></div>
+    <div class="feature-card"><div class="feature-icon">📡</div><div class="feature-title">Secure Your Wi-Fi</div><div class="feature-desc">How hackers get in via public Wi-Fi and your home router — and how to stop them permanently.</div></div>
+    <div class="feature-card"><div class="feature-icon">🛡️</div><div class="feature-title">Factory Reset Guide</div><div class="feature-desc">When and how to properly factory reset — the only guaranteed way to remove deep hacks.</div></div>
+  </div>
+
+  <div class="warning-box">
+    <span style="font-size:2rem;flex-shrink:0;">⚠️</span>
+    <p><strong style="color:#ff6400;">Right now, there's likely at least one app on your phone with excessive permissions you never approved.</strong> Most Australians have never checked. This guide takes 20 minutes to read — and could save you from disaster.</p>
+  </div>
+
+  <div class="section-tag">What's Inside — 12 Chapters</div>
+  <h2>Complete Chapter Guide</h2>
+  <div class="chapter-list">
+    <div class="chapter"><div class="ch-num">1</div><div><div class="ch-title">How Phones Get Hacked — The 6 Most Common Methods</div><div class="ch-desc">Public Wi-Fi, fake apps, phishing links, SIM swaps, Bluetooth attacks, and physical access.</div></div></div>
+    <div class="chapter"><div class="ch-num">2</div><div><div class="ch-title">Warning Signs Your Phone is Compromised</div><div class="ch-desc">Battery, data usage, heat, strange texts, unexpected calls, slow performance — what's normal vs alarming.</div></div></div>
+    <div class="chapter"><div class="ch-num">3</div><div><div class="ch-title">How to Check for Spy Apps — Android Step by Step</div><div class="ch-desc">Settings menus to check, apps to look for, how to read battery stats and data usage to spot hidden apps.</div></div></div>
+    <div class="chapter"><div class="ch-num">4</div><div><div class="ch-title">How to Check for Spy Apps — iPhone Step by Step</div><div class="ch-desc">iOS privacy settings, profile inspection, VPN config checks, and how to detect AirPlay tracking.</div></div></div>
+    <div class="chapter"><div class="ch-num">5</div><div><div class="ch-title">App Permissions Audit — Full Checklist</div><div class="ch-desc">Every permission category, what's dangerous, and how to revoke access from suspicious apps.</div></div></div>
+    <div class="chapter"><div class="ch-num">6</div><div><div class="ch-title">Emergency Steps If You've Been Hacked</div><div class="ch-desc">New SIM, factory reset, new email — the exact sequence that cuts off hacker access permanently.</div></div></div>
+    <div class="chapter"><div class="ch-num">7</div><div><div class="ch-title">Secure Your Banking Apps & Financial Accounts</div><div class="ch-desc">2FA setup, biometric locks, app-specific PINs, bank notification settings, and suspicious transaction alerts.</div></div></div>
+    <div class="chapter"><div class="ch-num">8</div><div><div class="ch-title">Lock Down Social Media Accounts</div><div class="ch-desc">Facebook, Instagram, TikTok — how to check active sessions, remove unknown devices, enable security alerts.</div></div></div>
+    <div class="chapter"><div class="ch-num">9</div><div><div class="ch-title">Wi-Fi Security — Home & Public</div><div class="ch-desc">Router security settings, VPN use, how to spot fake hotspots, and what never to do on public Wi-Fi.</div></div></div>
+    <div class="chapter"><div class="ch-num">10</div><div><div class="ch-title">Password Security & Password Managers</div><div class="ch-desc">How to create unbreakable passwords, best free password managers for Australians, and how to check if you've been breached.</div></div></div>
+    <div class="chapter"><div class="ch-num">11</div><div><div class="ch-title">Protecting Elderly Relatives From Cyber Scams</div><div class="ch-desc">The scams targeting older Australians right now, and how to set up their devices safely.</div></div></div>
+    <div class="chapter"><div class="ch-num">12</div><div><div class="ch-title">Your Ongoing Security Checklist</div><div class="ch-desc">Monthly, quarterly and annual security tasks to keep you protected permanently.</div></div></div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <h2>Get the Cyber Security Guide</h2>
+  <p>12 chapters. Instant PDF. Written for everyday Australians — no tech knowledge needed.</p>
+  <div style="display:flex;justify-content:center;align-items:baseline;gap:10px;margin-bottom:24px;">
+    <span style="font-size:2.4rem;font-weight:900;color:var(--gold);">$4.99</span>
+    <span style="color:var(--muted);font-size:0.85rem;">AUD · one-time · instant PDF</span>
+  </div>
+  <a href="https://buy.stripe.com/5kQbJ0eCEgolgUZ6I84c80d" class="buy-btn" target="_blank">🔐 Get Instant Access — $4.99</a>
+  <p style="color:var(--muted);font-size:0.8rem;margin-top:14px;">Or get <a href="bundle.html" style="color:var(--gold);">all 4 guides for $39.90</a> — best value</p>
+</div>
+
+<footer>
+  <a href="/">Home</a><a href="identity-theft.html">Identity Recovery</a><a href="bundle.html">Bundle Deal</a><a href="privacy.html">Privacy</a>
+  <p style="margin-top:10px;">© 2026 MissingCash Australia · ABN 52 347 989 391</p>
+</footer>
+</body>
+</html>
